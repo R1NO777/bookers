@@ -1,0 +1,20 @@
+<tbody>
+      <tr>
+        <td>
+              <% @books.each do |book| %>
+            <th>
+              <%= link_to book.title, "/todolist/#{book.id}" %>
+            </th>
+              <% end %>
+        </td>
+        <td>
+              <% @books.each do |book| %>
+            <th>
+              <%= link_to book.body, "/todolist/#{book.id}" %>
+            </th>
+              <% end %>
+        </td>
+        
+      </tr>  
+    </tbody>
+  </table>
