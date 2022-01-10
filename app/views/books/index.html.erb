@@ -19,13 +19,13 @@
           <%= book.body %>
         </td>
         <td>
-          <%= link_to "Show", todolist_path(book.id) %>
+          <%= link_to "Show", book_path(book.id) %>
         </td>
         <td>
-          <%= link_to "Edit", edit_todolist_path(book.id) %>
+          <%= link_to "Edit", edit_book_path(book.id) %>
         </td>
         <td>
-          <%= link_to "Destroy", destroy_todolist_path(book.id), method: :delete, data: { confirm: 'Are you sure?' }  %>
+          <%= link_to "Destroy", book_path(book.id), method: :DELETE, data: { confirm: 'Are you sure?' }  %>
         </td>
       </tr>
       <% end %>
@@ -39,7 +39,7 @@
       <% end %>
     <% end %>
     
-    <%= form_with model: @book, url:'/todolist', local:true do |f| %>
+    <%= form_with model: @book, url:'/books', local:true do |f| %>
       <h4>Title</h4>
       <%= f.text_field :title %>
       <H4>Body</H4>
